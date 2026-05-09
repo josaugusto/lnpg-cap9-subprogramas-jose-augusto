@@ -3,11 +3,11 @@ public class PassagemValor {
     public static void main(String[] args) {
         int valor = 10;
 
-        System.out.println("Main - Valor antes da chamada: " + valor);
+        System.out.println("main - Valor antes da chamada: " + valor);
 
         alterarNumero(valor);
 
-        System.out.println("Main - Valor depois da chamada: " + valor);
+        System.out.println("main - Valor depois da chamada: " + valor);
     }
 
     public static void alterarNumero(int x) {
