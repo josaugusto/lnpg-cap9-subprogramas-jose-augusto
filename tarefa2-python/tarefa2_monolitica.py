@@ -1,18 +1,13 @@
 produtos = []
 
-escolha = 'S'
+escolha = "S"
 
-while escolha != 'N':
-
+while escolha != "N":
     nome = input("Produto: ")
     quantidade = int(input("Quantidade: "))
     preco = float(input("Preço unitário: R$ "))
 
-    produtos.append({
-        "produto": nome,
-        "quantidade": quantidade,
-        "preco": preco
-    })
+    produtos.append({"produto": nome, "quantidade": quantidade, "preco": preco})
 
     escolha = input("Deseja inserir outro produto? [S/N] ").upper()
 
@@ -22,7 +17,6 @@ descontoTotal = 0
 print("\n========= CUPOM =========\n")
 
 for produto in produtos:
-
     totalProduto = produto["preco"] * produto["quantidade"]
 
     subtotal += totalProduto
@@ -31,17 +25,16 @@ for produto in produtos:
 
     if totalProduto > 500:
         desconto = totalProduto * 0.10
-
     elif totalProduto > 200:
         desconto = totalProduto * 0.05
 
     descontoTotal += desconto
 
-    print(f'Produto: {produto["produto"]}')
-    print(f'Quantidade: {produto["quantidade"]}')
-    print(f'Preço unitário: R$ {produto["preco"]:.2f}')
-    print(f'Total: R$ {totalProduto:.2f}')
-    print(f'Desconto: R$ {desconto:.2f}')
+    print(f"Produto: {produto['produto']}")
+    print(f"Quantidade: {produto['quantidade']}")
+    print(f"Preço unitário: R$ {produto['preco']:.2f}")
+    print(f"Total: R$ {totalProduto:.2f}")
+    print(f"Desconto: R$ {desconto:.2f}")
     print()
 
 totalFinal = subtotal - descontoTotal

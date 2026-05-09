@@ -1,1 +1,2 @@
 *.class
+/.ruff_cache
