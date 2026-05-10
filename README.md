@@ -29,7 +29,13 @@ Quando `x` foi alterada para `20` dentro do método `alterarNumero()`, apenas a 
 
 ## Tarefa 4 — Java: Referências
 
-Descrição ou link da atividade.
+Java não possui passagem por referência verdadeira. Em Java, toda passagem de parâmetros é feita por valor.
+
+Quando o objeto `produto1`, da classe `Produto`, é passado para o método `aplicarDesconto()`, o que é enviado não é o objeto em si, mas uma cópia da referência que aponta para ele.
+
+Isso significa que a variável `p`, dentro do método `aplicarDesconto()`, passa a apontar para o mesmo objeto que a variável `produto1` no método `main`.
+
+Por esse motivo, alterações feitas no conteúdo do objeto através de `p`, como a modificação do atributo `preco`, também afetam o objeto acessado por `produto1`, já que ambas as variáveis referenciam o mesmo objeto na memória.
 
 ---
 
