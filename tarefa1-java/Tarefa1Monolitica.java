@@ -2,48 +2,50 @@ import java.util.Scanner;
 import java.util.Locale;
 
 public class Tarefa1Monolitica {
-
     public static void main(String[] args) {
 
         Locale.setDefault(Locale.US);
 
         Scanner sc = new Scanner(System.in);
 
-        Aluno[] alunos = new Aluno[5];
+        String[] alunos = new String[5];
+
+        double[][] notas = new double[5][3];
+
+        double[] media = new double[5];
+
+        String[] situacao = new String[5];
 
         for (int i = 0; i < alunos.length; i++) {
 
-            alunos[i] = new Aluno();
-
-            alunos[i].notas = new double[3];
-
             System.out.print("Aluno: ");
-            alunos[i].nome = sc.nextLine();
 
-            for (int j = 0; j < alunos[i].notas.length; j++) {
+            alunos[i] = sc.nextLine();
 
-                System.out.printf("%dª nota de %s: ", j + 1, alunos[i].nome);
+            for (int j = 0; j < notas[i].length; j++) {
 
-                alunos[i].notas[j] = sc.nextDouble();
+                System.out.printf("%dª nota de %s: ", j + 1, alunos[i]);
 
-                alunos[i].media += alunos[i].notas[j];
+                notas[i][j] = sc.nextDouble();
+
+                media[i] += notas[i][j];
             }
 
-            alunos[i].media /= alunos[i].notas.length;
+            media[i] /= notas[i].length;
 
-            if (alunos[i].media >= 7.0) {
+            if (media[i] >= 7.0) {
 
-                alunos[i].situacao = "Aprovado";
+                situacao[i] = "Aprovado";
 
             }
-            else if (alunos[i].media >= 5.0) {
+            else if (media[i] >= 5.0) {
 
-                alunos[i].situacao = "Recuperação";
+                situacao[i] = "Recuperação";
 
             }
             else {
 
-                alunos[i].situacao = "Reprovado";
+                situacao[i] = "Reprovado";
 
             }
 
@@ -52,26 +54,16 @@ public class Tarefa1Monolitica {
 
         System.out.println("\n--- RELATÓRIO FINAL ---");
 
-        for (Aluno aluno : alunos) {
+        for (int i = 0; i < alunos.length; i++) {
 
-            System.out.println("\nAluno: " + aluno.nome);
+            System.out.println("\nAluno: " + alunos[i]);
 
-            System.out.printf("Média: %.2f\n", aluno.media);
+            System.out.printf("Média: %.2f\n", media[i]);
 
-            System.out.println("Situação: " + aluno.situacao);
+            System.out.println("Situação: " + situacao[i]);
+
         }
-
         sc.close();
     }
 }
 
-class Aluno {
-
-    String nome;
-
-    double[] notas;
-
-    double media;
-
-    String situacao;
-}
