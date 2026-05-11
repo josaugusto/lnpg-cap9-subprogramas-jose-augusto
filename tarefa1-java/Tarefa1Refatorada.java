@@ -3,30 +3,24 @@ import java.util.Locale;
 
 public class Tarefa1Refatorada {
 
-    static String[] alunos = new String[5];
-
-    static double[][] notas = new double[5][3];
-
-    static double[] media = new double[5];
-
-    static String[] situacao = new String[5];
-
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
 
         Locale.setDefault(Locale.US);
 
-        lerAluno();
-        lerNotas();
-        calcularMedia();
-        determinarSituacao();
-        imprimirRelatorio();
+        String[] alunos = lerAluno();
+        double[][] notas = lerNotas(alunos);
+        double[] medias = calcularMedia(alunos, notas);
+        String[] situacoes = determinarSituacao(alunos, medias);
+        imprimirRelatorio(alunos, medias, situacoes);
 
         sc.close();
     }
 
-    public static void lerAluno() {
+    public static String[] lerAluno() {
+
+        String[] alunos = new String[5];
 
         for (int i = 0; i < alunos.length; i++) {
 
@@ -34,9 +28,13 @@ public class Tarefa1Refatorada {
 
             alunos[i] = sc.nextLine();
         }
+
+        return alunos;
     }
 
-    public static void lerNotas() {
+    public static double[][] lerNotas(String[] alunos) {
+
+        double[][] notas = new double[5][3];
 
         for (int i = 0; i < alunos.length; i++) {
 
@@ -49,9 +47,12 @@ public class Tarefa1Refatorada {
 
             sc.nextLine(); // limpa o buffer
         }
+        return notas;
     }
 
-    public static void calcularMedia() {
+    public static double[] calcularMedia(String[] alunos, double[][] notas) {
+
+        double[] media = new double[5];
 
         for (int i = 0; i < alunos.length; i++) {
 
@@ -62,28 +63,34 @@ public class Tarefa1Refatorada {
 
             media[i] /= notas[i].length;
         }
+
+        return media;
     }
 
-    public static void determinarSituacao() {
+    public static String[] determinarSituacao(String[] alunos, double[] medias) {
+
+        String[] situacoes = new String[5];
 
         for (int i = 0; i < alunos.length; i++) {
 
-            if (media[i] >= 7.0) {
+            if (medias[i] >= 7.0) {
 
-                situacao[i] = "Aprovado";
+                situacoes[i] = "Aprovado";
 
-            } else if (media[i] >= 5.0) {
+            } else if (medias[i] >= 5.0) {
 
-                situacao[i] = "Recuperação";
+                situacoes[i] = "Recuperação";
 
             } else {
 
-                situacao[i] = "Reprovado";
+                situacoes[i] = "Reprovado";
             }
         }
+
+        return situacoes;
     }
 
-    public static void imprimirRelatorio() {
+    public static void imprimirRelatorio(String[] alunos, double[] medias, String[] situacoes) {
 
         System.out.println("\n--- RELATÓRIO FINAL ---");
 
@@ -91,9 +98,9 @@ public class Tarefa1Refatorada {
 
             System.out.println("\nAluno: " + alunos[i]);
 
-            System.out.printf("Média: %.2f\n", media[i]);
+            System.out.printf("Média: %.2f\n", medias[i]);
 
-            System.out.println("Situação: " + situacao[i]);
+            System.out.println("Situação: " + situacoes[i]);
         }
     }
 }
