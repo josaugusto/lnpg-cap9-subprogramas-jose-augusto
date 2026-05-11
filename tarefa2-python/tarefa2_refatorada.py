@@ -1,7 +1,6 @@
-produtos = []
-
-
 def ler_produto():
+    produtos = []
+
     escolha = "S"
 
     while escolha != "N":
@@ -13,8 +12,10 @@ def ler_produto():
 
         escolha = input("Deseja inserir outro produto? [S/N] ").upper()
 
+    return produtos
 
-def calcular_subtotal():
+
+def calcular_subtotal(produtos):
 
     subtotal = 0
 
@@ -26,20 +27,27 @@ def calcular_subtotal():
     return subtotal
 
 
-def calcular_desconto():
+def calcular_desconto_produto(totalProduto):
+
+    desconto = 0
+
+    if totalProduto > 500:
+        desconto = totalProduto * 0.10
+
+    elif totalProduto > 200:
+        desconto = totalProduto * 0.05
+
+    return desconto
+
+
+def calcular_desconto(produtos):
 
     descontoTotal = 0
 
     for produto in produtos:
         totalProduto = produto["preco"] * produto["quantidade"]
 
-        desconto = 0
-
-        if totalProduto > 500:
-            desconto = totalProduto * 0.10
-
-        elif totalProduto > 200:
-            desconto = totalProduto * 0.05
+        desconto = calcular_desconto_produto(totalProduto)
 
         descontoTotal += desconto
 
@@ -48,23 +56,17 @@ def calcular_desconto():
 
 def calcular_total():
 
-    return calcular_subtotal() - calcular_desconto()
+    return calcular_subtotal(produtos) - calcular_desconto(produtos)
 
 
-def imprimir_cupom():
+def imprimir_cupom(produtos):
 
     print("\n========= CUPOM =========\n")
 
     for produto in produtos:
         totalProduto = produto["preco"] * produto["quantidade"]
 
-        desconto = 0
-
-        if totalProduto > 500:
-            desconto = totalProduto * 0.10
-
-        elif totalProduto > 200:
-            desconto = totalProduto * 0.05
+        desconto = calcular_desconto_produto(totalProduto)
 
         print(f"Produto: {produto['produto']}")
         print(f"Quantidade: {produto['quantidade']}")
@@ -73,8 +75,8 @@ def imprimir_cupom():
         print(f"Desconto: R$ {desconto:.2f}")
         print()
 
-    subTotal = calcular_subtotal()
-    descontoTotal = calcular_desconto()
+    subTotal = calcular_subtotal(produtos)
+    descontoTotal = calcular_desconto(produtos)
     totalFinal = calcular_total()
 
     print("=========================")
@@ -84,5 +86,5 @@ def imprimir_cupom():
     print("=========================")
 
 
-ler_produto()
-imprimir_cupom()
+produtos = ler_produto()
+imprimir_cupom(produtos)
