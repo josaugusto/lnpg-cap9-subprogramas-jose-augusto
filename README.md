@@ -13,7 +13,13 @@ Descrição ou link da atividade.
 
 ## Tarefa 2 — Python
 
-Descrição ou link da atividade.
+As partes mais repetitivas da versão monolítica inicial eram os vários loops for utilizados em cada etapa do programa. Havia um loop para calcular o subtotal, outro para calcular os descontos e outro para imprimir as informações dos produtos, o que deixava o código mais repetitivo e difícil de manter. Na versão monolítica final, isso foi não ocorre.
+
+As partes que ficaram mais reutilizáveis foram as funções calcular_subtotal(produtos), calcular_desconto_produto(totalProduto), calcular_desconto(produtos), calcular_total() e imprimir_cupom(produtos), pois agora elas podem ser utilizadas com qualquer lista de produtos fornecida pelo usuário. 
+
+Uma melhoria importante foi a criação da função calcular_desconto_produto(). Antes, a mesma estrutura if e elif precisava ser repetida sempre que fosse necessário calcular o desconto de um produto. Com essa função, a lógica de cálculo de desconto ficou em uma unica função, evitando duplicação de código e facilitando futuras alterações nas regras de desconto.
+
+A divisão do programa em diferentes funções melhora significativamente a legibilidade, organização e manutenção do código. Caso seja necessário alterar alguma funcionalidade, basta modificar a função responsável por aquela tarefa específica, sem a necessidade de alterar várias partes do programa.
 
 ---
 
