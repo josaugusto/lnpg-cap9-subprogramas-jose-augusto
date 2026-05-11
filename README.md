@@ -7,7 +7,7 @@
 
 ---
 
-## Tarefa 1 — Java
+## Tarefa 1 — Java (RASCUNHO)
 
 As minhas decisões de modularização na versão refatorada do programa foram tomadas com o objetivo de tornar o código mais organizado, reutilizável e fácil de manter em comparação à versão monolítica, onde toda a lógica estava concentrada apenas no método main.
 
@@ -17,7 +17,7 @@ Essa divisão melhora a legibilidade do código, reduz repetição e facilita fu
 
 ---
 
-## Tarefa 2 — Python
+## Tarefa 2 — Python (RASCUNHO)
 
 As partes mais repetitivas da versão monolítica inicial eram os vários loops `for` utilizados em cada etapa do programa. Havia um loop para calcular o subtotal, outro para calcular os descontos e outro para imprimir as informações dos produtos, o que deixava o código mais repetitivo e difícil de manter. Na versão monolítica final, isso foi corrigido.
 
