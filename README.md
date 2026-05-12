@@ -7,7 +7,7 @@
 
 ---
 
-## Tarefa 1 — Java (RASCUNHO)
+## Tarefa 1 — Java
 
 As minhas decisões de modularização na versão refatorada do programa foram tomadas com o objetivo de tornar o código mais organizado, reutilizável e fácil de manter em comparação à versão monolítica, onde toda a lógica estava concentrada apenas no método main.
 
