@@ -13,19 +13,19 @@ As minhas decisões de modularização na versão refatorada do programa foram t
 
 Na versão refatorada, cada método possui uma responsabilidade específica. O método `lerAluno()` realiza a leitura dos nomes dos alunos, `lerNotas(alunos)` lê as notas, `calcularMedia(alunos, notas)` calcula as médias, `determinarSituacao(alunos, medias)` define a situação dos alunos e imprimirRelatorio(alunos, medias, situacoes) exibe o relatório final.
 
-Essa divisão melhora a legibilidade do código, reduz repetição e facilita futuras manutenções.
+Essa divisão melhora a legibilidade do código, reduz a repetição e facilita a realização de futuras manutenções.
 
 ---
 
-## Tarefa 2 — Python (RASCUNHO)
+## Tarefa 2 — Python 
 
-As partes mais repetitivas da versão monolítica inicial eram os vários loops `for` utilizados em cada etapa do programa. Havia um loop para calcular o subtotal, outro para calcular os descontos e outro para imprimir as informações dos produtos, o que deixava o código mais repetitivo e difícil de manter. Na versão monolítica final, isso foi corrigido.
+As partes mais repetitivas da versão monolítica inicial eram os vários loops for utilizados em cada etapa do programa. Havia um loop para calcular o subtotal, outro para calcular os descontos e outro para imprimir as informações dos produtos, o que deixava o código mais repetitivo e difícil de manter. Na versão monolítica final, eu utilizei apenas dois loops: um para ler os produtos individualmente e outro para obter os valores de subtotal, desconto e imprimir o cupom.
 
-As partes que ficaram mais reutilizáveis foram as funções `calcular_subtotal(produtos)`, `calcular_desconto_produto(totalProduto)`, `calcular_desconto(produtos)`, `calcular_total()` e `imprimir_cupom(produtos)`, pois agora elas podem ser utilizadas com qualquer lista de produtos que o programador defina. **(vou mudar essa parte depois)**
+As partes que ficaram mais reutilizáveis foram as operações de calcular o subtotal de um determinado produto, o desconto por produto, desconto total e a parte de imprimir o cupom.
 
-Uma melhoria importante foi a criação da função `calcular_desconto_produto()`. Antes, a mesma estrutura if e elif precisava ser repetida sempre que fosse necessário calcular o desconto de um produto. Com essa função, a lógica de cálculo de desconto ficou em uma unica função, evitando duplicação de código desnecessária.
+Uma melhoria importante foi a criação da função `calcular_desconto_produto()`. Antes, a mesma estrutura if e elif precisava ser repetida sempre que fosse necessário calcular o desconto de um produto. O uso dessa função evita a repetição desnecessária de código.
 
-Caso seja necessário alterar alguma funcionalidade, basta modificar a função responsável por aquela tarefa específica, sem a necessidade de alterar várias partes do programa. Isso facilita a manutenção futura do código, melhora sua organização e aumenta significativamente a legibilidade.
+Caso seja necessário alterar alguma funcionalidade, basta modificar a função responsável por aquela tarefa específica, sem a necessidade de alterar várias partes do programa. Isso facilita a manutenção futura do código, melhora sua organização e legibilidade.
 
 ---
 
