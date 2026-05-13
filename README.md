@@ -7,6 +7,38 @@
 
 ---
 
+## ▶️ Instruções de Execução
+
+### ☕ Java
+
+1. Certifique-se de possuir o **Java JDK** instalado em seu computador.
+2. Abra o terminal na pasta onde o arquivo `.java` está localizado.
+3. Compile o programa utilizando o comando:
+
+```bash
+javac NomeDoArquivo.java
+```
+
+4. Após a compilação, execute o programa com:
+
+```bash
+java NomeDoArquivo
+```
+
+> Substitua `NomeDoArquivo` pelo nome real do arquivo Java, sem a extensão `.java`.
+
+---
+
+### 🐍 Python
+
+1. Certifique-se de possuir o **Python** instalado.
+2. Abra o terminal na pasta onde o arquivo `.py` está localizado.
+3. Execute o programa utilizando um dos comandos abaixo:
+
+```bash
+python nome_do_arquivo.py
+```
+
 ## Tarefa 1 — Java
 
 As minhas decisões de modularização na versão refatorada do programa foram tomadas com o objetivo de tornar o código mais organizado, reutilizável e fácil de manter em comparação à versão monolítica, onde toda a lógica estava concentrada apenas no método main.
