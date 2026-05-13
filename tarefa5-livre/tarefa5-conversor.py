@@ -1,5 +1,6 @@
 import math
 
+# Funções principais
 
 def menu():
     print("\n===== CONVERSOR DE UNIDADES =====")
@@ -40,11 +41,7 @@ def celsius_para_kelvin(valor):
 def graus_para_radianos(valor):
     return math.radians(valor)
 
-
-# =========================
-# Funções Auxiliares
-# =========================
-
+# Funções auxiliares
 
 def ler_valor(mensagem):
     return float(input(mensagem))
