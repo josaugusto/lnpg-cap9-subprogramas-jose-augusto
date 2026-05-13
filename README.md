@@ -85,7 +85,7 @@ Por esse motivo, alterações feitas no conteúdo do objeto através de `p`, com
 
 ## Tarefa 5 — Tema Livre
 
-Descrição ou link da atividade.
+
 
 ---
 
