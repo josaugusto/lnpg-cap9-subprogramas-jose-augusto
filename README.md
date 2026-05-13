@@ -86,6 +86,22 @@ Por esse motivo, alterações feitas no conteúdo do objeto através de `p`, com
 ## Tarefa 5 — Tema Livre
 
 
+Diagrama das chamadas:
+
+menu() ->
+executar_conversao(funcao, mensagem_entrada, unidade_saida)
+-> ler_valor(mensagem_entrada)
+-> funcao(valor)
+-> mostrar_resultado(resultado, unidade_saida)
+
+
+Ao invés de possuir várias linhas de código repetidas para cada opção escolhida pelo usuário, como uma instrução para ler o valor, outra para calcular o resultado da conversão e outra para exibir a mensagem do valor convertido, é muito mais simples criar uma única função genérico para cada opção do usuário.
+
+Essa função é executar_conversao(funcao, mensagem_entrada, unidade_saida), que recebe como parâmetro uma das funções principais de conversão, a mensagem que será exibida ao usuário e a unidade de medida correspondente ao resultado.
+
+A maior dificuldade encontrada foi desenvolver uma função auxiliar genérica que pudesse funcionar corretamente para todas as opções de conversão escolhidas pelo usuário.
+
+A principal vantagem da modularização é a possibilidade de dividir o programa em diversas partes independentes. Dessa forma, caso seja necessário alterar alguma operação, não é preciso procurar e modificar todos os trechos do código onde ela é utilizada. Com o uso de funções, basta alterar o corpo da função correspondente, o que facilita a manutenção, a organização e a reutilização do código.
 
 ---
 
