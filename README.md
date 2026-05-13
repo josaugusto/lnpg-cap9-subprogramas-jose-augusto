@@ -43,7 +43,7 @@ python nome_do_arquivo.py
 
 As minhas decisões de modularização na versão refatorada do programa foram tomadas com o objetivo de tornar o código mais organizado, reutilizável e fácil de manter em comparação à versão monolítica, onde toda a lógica estava concentrada apenas no método main.
 
-Na versão refatorada, cada método possui uma responsabilidade específica. O método `lerAluno()` realiza a leitura dos nomes dos alunos, `lerNotas(alunos)` lê as notas, `calcularMedia(alunos, notas)` calcula as médias, `determinarSituacao(alunos, medias)` define a situação dos alunos e imprimirRelatorio(alunos, medias, situacoes) exibe o relatório final.
+Na versão refatorada, cada método possui uma responsabilidade específica. O método `lerAluno()` realiza a leitura dos nomes dos alunos, `lerNotas(alunos)` lê as notas, `calcularMedia(alunos, notas)` calcula as médias, `determinarSituacao(alunos, medias)` define a situação dos alunos e `imprimirRelatorio(alunos, medias, situacoes)` exibe o relatório final.
 
 Essa divisão melhora a legibilidade do código, reduz a repetição e facilita a realização de futuras manutenções.
 
@@ -85,7 +85,7 @@ Por esse motivo, alterações feitas no conteúdo do objeto através de `p`, com
 
 ## Tarefa 5 — Tema Livre
 
-    Diagrama das chamadas:
+Diagrama das chamadas:
 
     menu() ->
     executar_conversao(funcao, mensagem_entrada, unidade_saida)
