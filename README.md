@@ -11,7 +11,7 @@
 
 ### ☕ Java
 
-1. Certifique-se de possuir o **Java JDK** instalado em seu computador.
+1. É necessário ter o **Java JDK** instalado em seu computador.
 2. Abra o terminal na pasta onde o arquivo `.java` está localizado.
 3. Compile o programa utilizando o comando:
 
@@ -31,7 +31,7 @@ java NomeDoArquivo
 
 ### 🐍 Python
 
-1. Certifique-se de possuir o **Python** instalado.
+1. É necessário ter o **Python** instalado em seu computador.
 2. Abra o terminal na pasta onde o arquivo `.py` está localizado.
 3. Execute o programa utilizando um dos comandos abaixo:
 
@@ -85,7 +85,6 @@ Por esse motivo, alterações feitas no conteúdo do objeto através de `p`, com
 
 ## Tarefa 5 — Tema Livre
 
-
     Diagrama das chamadas:
 
     menu() ->
@@ -97,7 +96,7 @@ Por esse motivo, alterações feitas no conteúdo do objeto através de `p`, com
 
 Ao invés de possuir várias linhas de código repetidas para cada opção escolhida pelo usuário, como uma instrução para ler o valor, outra para calcular o resultado da conversão e outra para exibir a mensagem do valor convertido, é muito mais simples criar uma única função genérica para cada opção do usuário.
 
-Essa função é executar_conversao(funcao, mensagem_entrada, unidade_saida), que recebe como parâmetro uma das funções principais de conversão, a mensagem que será exibida ao usuário e a unidade de medida correspondente ao resultado.
+Essa função é `executar_conversao(funcao, mensagem_entrada, unidade_saida)`, que recebe como parâmetro uma das funções principais de conversão, a mensagem que será exibida ao usuário e a unidade de medida correspondente ao resultado.
 
 A maior dificuldade encontrada foi desenvolver uma função auxiliar genérica que pudesse funcionar corretamente para todas as opções de conversão escolhidas pelo usuário.
 
