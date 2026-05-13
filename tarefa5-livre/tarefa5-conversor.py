@@ -2,6 +2,7 @@ import math
 
 # Funções principais
 
+
 def menu():
     print("\n===== CONVERSOR DE UNIDADES =====")
     print("1 - Metro para Quilômetro")
@@ -41,7 +42,9 @@ def celsius_para_kelvin(valor):
 def graus_para_radianos(valor):
     return math.radians(valor)
 
+
 # Funções auxiliares
+
 
 def ler_valor(mensagem):
     return float(input(mensagem))

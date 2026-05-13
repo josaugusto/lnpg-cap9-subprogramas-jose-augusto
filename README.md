@@ -86,16 +86,16 @@ Por esse motivo, alterações feitas no conteúdo do objeto através de `p`, com
 ## Tarefa 5 — Tema Livre
 
 
-Diagrama das chamadas:
+    Diagrama das chamadas:
 
-menu() ->
-executar_conversao(funcao, mensagem_entrada, unidade_saida)
--> ler_valor(mensagem_entrada)
--> funcao(valor)
--> mostrar_resultado(resultado, unidade_saida)
+    menu() ->
+    executar_conversao(funcao, mensagem_entrada, unidade_saida)
+        -> ler_valor(mensagem_entrada)
+        -> funcao(valor)
+        -> mostrar_resultado(resultado, unidade_saida)
 
 
-Ao invés de possuir várias linhas de código repetidas para cada opção escolhida pelo usuário, como uma instrução para ler o valor, outra para calcular o resultado da conversão e outra para exibir a mensagem do valor convertido, é muito mais simples criar uma única função genérico para cada opção do usuário.
+Ao invés de possuir várias linhas de código repetidas para cada opção escolhida pelo usuário, como uma instrução para ler o valor, outra para calcular o resultado da conversão e outra para exibir a mensagem do valor convertido, é muito mais simples criar uma única função genérica para cada opção do usuário.
 
 Essa função é executar_conversao(funcao, mensagem_entrada, unidade_saida), que recebe como parâmetro uma das funções principais de conversão, a mensagem que será exibida ao usuário e a unidade de medida correspondente ao resultado.
 
